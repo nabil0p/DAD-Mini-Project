@@ -1,3 +1,8 @@
+login:
+email: nabil@gmail.com
+pass: 1234
+
+
 In This Zip only Has The laravel folder That We Change Only.
 1. app
 2. config
