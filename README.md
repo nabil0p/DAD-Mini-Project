@@ -5,11 +5,11 @@ This project involves multiple applications to manage a custom PC shop, includin
 ## Applications Involved
 
 ### 1. Web Administrator (Laravel)
-- **Description**: This web application is used by administrators to manage users and products. It is built using the Laravel framework.
+- **Description**: This web application is used by administrators to manage products. It is built using the Laravel framework.
 
 
 ### 2. Customer Application (Java Swing)
-- **Description**: This desktop application allows customers to login and purchase products. It is built using Java Swing.
+- **Description**: This desktop application allows customers to log in and purchase products. It is built using Java Swing.
 
 
 ## Architecture/Layer Diagram
