@@ -37,6 +37,35 @@ graph TD
   end
 
 ```
+# Web Administrator (Laravel)
+
+## Explanation
+
+**Web Administrator**: This part of the application is responsible for managing users and products. It follows a layered architecture to separate concerns and improve maintainability.
+
+### Controller Layer
+
+Handles HTTP requests and responses. Controllers process incoming requests, call the appropriate service methods, and return responses.
+
+- **UserController** and **ProductController** are part of this layer. They handle user and product-related requests, respectively.
+
+### Service Layer
+
+Contains business logic. Services perform operations by using repositories to interact with the database.
+
+- **UserService** and **ProductService** are part of this layer. They contain business logic for user and product management.
+
+### Data Access Layer
+
+Manages database interactions. Repositories are used to abstract the data access operations.
+
+- **UserRepository** and **ProductRepository** are part of this layer. They interact with the `users_table` and `products_table`, respectively.
+
+### Database
+
+Stores the application's data. It includes the `users_table` and `products_table`.
+
+
 
 ### Customer Application (Java Swing)
 
@@ -59,6 +88,32 @@ graph TD
   end
 ```
 
+# Customer Application (Java Swing)
+
+## Explanation
+
+**Customer Application**: This is a desktop application that allows customers to log in and purchase products. It is built using Java Swing and follows a layered architecture.
+
+### GUI Layer
+
+Contains the user interface components.
+
+- **LoginForm**, **ProfilePage**, and **ProductPage** are part of this layer. They provide the UI for logging in, viewing profiles, and browsing products.
+
+### Service Layer
+
+Contains logic for communicating with the backend. It uses an API client to make HTTP requests.
+
+- **API_Client** is part of this layer. It handles the communication with the REST API.
+
+### Middleware
+
+Facilitates communication between the GUI layer and the backend. It includes an HTTP client to send requests to the REST API.
+
+- **HTTP_Client** is part of this layer. It sends requests to the backend.
+- **REST_API** is the backend API that the client communicates with.
+
+
 ### Middleware
 
 ```mermaid
@@ -70,6 +125,26 @@ graph TD
     Logging_Middleware
   end
 ```
+
+# Middleware
+
+## Explanation:
+
+**Middleware**: Handles common tasks for incoming requests such as authentication, authorization, and logging.
+
+### Authentication Middleware
+
+Verifies user credentials during login.
+
+### Authorization Middleware
+
+Ensures the user has the necessary permissions for certain actions.
+
+### Logging Middleware
+
+Logs incoming requests and outgoing responses for monitoring and debugging purposes.
+
+
 ## List of URL Endpoints (Middleware RESTful)
 
 ### User Authentication Endpoints
