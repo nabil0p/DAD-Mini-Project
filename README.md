@@ -199,7 +199,7 @@ Logs incoming requests and outgoing responses for monitoring and debugging purpo
     - Run the provided SQL scripts to create the tables.
 
 2. **Run the Laravel Web Administrator**:
-    replace folder given at larvel
+    Replace the given folder in the `LaravelCode` folder after installing the Laravel package.
 
     ```sh
     cd web-administrator
