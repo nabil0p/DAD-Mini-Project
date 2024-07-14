@@ -118,27 +118,18 @@ graph TD
 
 ## How to Run the Project
 
-1. **Clone the repository**:
-    ```sh
-    git clone https://github.com/your-repo/custom-pc-shop.git
-    ```
 
-2. **Navigate to the project directory**:
-    ```sh
-    cd custom-pc-shop
-    ```
-
-3. **Set up the databases**:
+1. **Set up the databases**:
     - Create `laravel_db` database.
     - Run the provided SQL scripts to create the tables.
 
-4. **Run the Laravel Web Administrator**:
+2. **Run the Laravel Web Administrator**:
     ```sh
     cd web-administrator
     php artisan serve --host 192.168.1.116
     ```
 
-5. **Run the Customer Application (Java Swing) in Eclipse**:
+3. **Run the Customer Application (Java Swing) in Eclipse**:
     - Open Eclipse IDE.
     - Import the Java project:
       - Go to `File > Import`.
@@ -150,7 +141,8 @@ graph TD
       - In the `Package Explorer`, navigate to the `LoginForm` class.
       - Right-click on `LoginForm` and select `Run As > Java Application`.
 
-6. **Access the application**:
+4. **Access the application**:
     - Web Administrator: Open your web browser and go to `http://192.168.1.116:8000`.
     - Customer Application: Run the Java Swing application from Eclipse as described above.
+
 
