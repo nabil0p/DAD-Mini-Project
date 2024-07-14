@@ -14,7 +14,25 @@ This project involves multiple applications to manage a custom PC shop, includin
 
 ## Architecture/Layer Diagram
 
-### Web Administrator (Laravel)
+%% Web Administrator (Laravel)
+graph TD
+  subgraph Web_Administrator
+    Controller_Layer --> Service_Layer
+    Service_Layer --> Data_Access_Layer
+    Data_Access_Layer --> Database
+  end
+  
+  UserController --> Controller_Layer
+  ProductController --> Controller_Layer
+  UserService --> Service_Layer
+  ProductService --> Service_Layer
+  UserRepository --> Data_Access_Layer
+  ProductRepository --> Data_Access_Layer
+  
+  subgraph Database
+    users_table
+    products_table
+  end
 
 
 ### Customer Application (Java Swing)
