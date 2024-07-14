@@ -199,6 +199,8 @@ Logs incoming requests and outgoing responses for monitoring and debugging purpo
     - Run the provided SQL scripts to create the tables.
 
 2. **Run the Laravel Web Administrator**:
+    replace folder given at larvel
+
     ```sh
     cd web-administrator
     php artisan serve --host 192.168.1.116
