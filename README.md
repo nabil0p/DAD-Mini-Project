@@ -14,6 +14,7 @@ This project involves multiple applications to manage a custom PC shop, includin
 
 ## Architecture/Layer Diagram
 
+```mermaid
 %% Web Administrator (Laravel)
 graph TD
   subgraph Web_Administrator
@@ -34,6 +35,7 @@ graph TD
     products_table
   end
 
+```
 
 ### Customer Application (Java Swing)
 
