@@ -1,3 +1,7 @@
+Video Presentation link: 
+https://utemedu.sharepoint.com/sites/GroupSuhail/_layouts/15/stream.aspx?id=%2Fsites%2FGroupSuhail%2FShared%20Documents%2FGeneral%2FRecordings%2FNew%20meeting-20240714_230455-Meeting%20Recording%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E019f242d-4899-45b2-8cf4-f7a740f7a9a4 
+
+
 # Custom PC Shop Project
 
 This project involves multiple applications to manage a custom PC shop, including user authentication, product management, and purchasing functionalities.
@@ -156,6 +160,7 @@ Logs incoming requests and outgoing responses for monitoring and debugging purpo
 - **Authentication Middleware**: Verifies the user's credentials during login.
 - **Authorization Middleware**: Ensures the user has the necessary permissions to perform certain actions.
 - **Logging Middleware**: Logs all the incoming requests and outgoing responses for monitoring and debugging purposes.
+- **Update Product Quantity After Purchase**: Updates the quantity of a product in the database after a purchase is made.
 
 ## Database and Tables Involved
 
