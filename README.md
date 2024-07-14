@@ -14,6 +14,7 @@ This project involves multiple applications to manage a custom PC shop, includin
 
 ## Architecture/Layer Diagram
 
+### Web Administrator (Laravel)
 ```mermaid
 %% Web Administrator (Laravel)
 graph TD
@@ -36,18 +37,42 @@ graph TD
   end
 
 ```
-
+```mermaid
 ### Customer Application (Java Swing)
 
+%% Customer Application (Java Swing)
+graph TD
+  subgraph Customer_Application
+    GUI_Layer --> Service_Layer
+    Service_Layer --> Middleware
+  end
+  
+  LoginForm --> GUI_Layer
+  ProfilePage --> GUI_Layer
+  ProductPage --> GUI_Layer
+  API_Client --> Service_Layer
+  
+  subgraph Middleware
+    HTTP_Client
+    REST_API --> HTTP_Client
+  end
 
+```
 
 ### Middleware
 
-
+%% Middleware
+```mermaid
+graph TD
+  subgraph Middleware
+    Authentication_Middleware
+    Authorization_Middleware
+    Logging_Middleware
+  end
+```
 ## List of URL Endpoints (Middleware RESTful)
 
 ### User Authentication Endpoints
-- `POST /register`: Register a new user.
 - `POST /login`: Login an existing user.
 
 ### Product Management Endpoints
