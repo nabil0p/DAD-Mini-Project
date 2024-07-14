@@ -163,7 +163,6 @@ Logs incoming requests and outgoing responses for monitoring and debugging purpo
 ## Database and Tables Involved
 
 ### User Authentication and Product Management (Laravel Database)
-![Database Schema](path/to/database/schema/image.png)
 
 ### `users` Table
 | Column             | Type            | Description                      |
@@ -174,7 +173,6 @@ Logs incoming requests and outgoing responses for monitoring and debugging purpo
 | email_verified_at  | timestamp       | Email verification timestamp     |
 | password           | varchar(255)    | User's hashed password           |
 | level              | varchar(255)    | User's level/role                |
-| remember_token     | varchar(100)    | Token for "remember me" feature  |
 | created_at         | timestamp       | Record creation timestamp        |
 | updated_at         | timestamp       | Record update timestamp          |
 
