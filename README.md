@@ -36,9 +36,11 @@ graph TD
     products_table
   end
 
+```
 
 ### Customer Application (Java Swing)
 
+```mermaid
 %% Customer Application (Java Swing)
 graph TD
   subgraph Customer_Application
@@ -55,10 +57,11 @@ graph TD
     HTTP_Client
     REST_API --> HTTP_Client
   end
-
+```
 
 ### Middleware
 
+```mermaid
 %% Middleware
 graph TD
   subgraph Middleware
