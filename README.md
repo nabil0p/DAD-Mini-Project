@@ -4,27 +4,21 @@ This project involves multiple applications to manage a custom PC shop, includin
 
 ## Applications Involved
 
-### 1. User Authentication Service
-- **Description**: Manages user registration and login.
-- **Endpoints**:
-  - `POST /register`: Register a new user.
-  - `POST /login`: Login an existing user.
+### 1. Web Administrator (Laravel)
+- **Description**: This web application is used by administrators to manage users and products. It is built using the Laravel framework.
 
-### 2. Product Management Service
-- **Description**: Handles the product inventory, including listing, updating, and searching products.
-- **Endpoints**:
-  - `GET /products`: Retrieve a list of all products.
-  - `GET /products/{id}`: Retrieve details of a specific product by ID.
-  - `PUT /products/{id}`: Update the details of a specific product by ID.
-  - `POST /products/search`: Search for products based on criteria.
-  - `GET /products/search`: Search for products based on criteria (alternative method).
+
+### 2. Customer Application (Java Swing)
+- **Description**: This desktop application allows customers to login and purchase products. It is built using Java Swing.
+
 
 ## Architecture/Layer Diagram
 
-### User Authentication Service
+### Web Administrator (Laravel)
 
 
-### Product Management Service
+### Customer Application (Java Swing)
+
 
 
 ### Middleware
@@ -48,40 +42,34 @@ This project involves multiple applications to manage a custom PC shop, includin
 
 ## Database and Tables Involved
 
-### User Authentication Service
-- **Database**: `auth_db`
-- **Tables**:
-  - `users`: Stores user information such as email, password, and name.
-
-### Product Management Service
-- **Database**: `product_db`
-- **Tables**:
-  - `products`: Stores product details including ID, title, price, product code, description, quantity, and status.
-
-## Database Schema
+### User Authentication and Product Management (Laravel Database)
+![Database Schema](path/to/database/schema/image.png)
 
 ### `users` Table
-| Column    | Type    | Description                  |
-|-----------|---------|------------------------------|
-| id        | INT     | Primary Key                  |
-| email     | VARCHAR | User's email address         |
-| password  | VARCHAR | User's hashed password       |
-| name      | VARCHAR | User's name                  |
-| created_at| TIMESTAMP| Record creation timestamp   |
-| updated_at| TIMESTAMP| Record update timestamp     |
+| Column             | Type            | Description                      |
+|--------------------|-----------------|----------------------------------|
+| id                 | bigint unsigned | Primary Key                      |
+| name               | varchar(255)    | User's name                      |
+| email              | varchar(255)    | User's email address             |
+| email_verified_at  | timestamp       | Email verification timestamp     |
+| password           | varchar(255)    | User's hashed password           |
+| level              | varchar(255)    | User's level/role                |
+| remember_token     | varchar(100)    | Token for "remember me" feature  |
+| created_at         | timestamp       | Record creation timestamp        |
+| updated_at         | timestamp       | Record update timestamp          |
 
 ### `products` Table
-| Column        | Type      | Description                    |
-|---------------|-----------|--------------------------------|
-| id            | INT       | Primary Key                    |
-| title         | VARCHAR   | Product title                  |
-| price         | DOUBLE    | Product price                  |
-| product_code  | VARCHAR   | Unique code for the product    |
-| description   | TEXT      | Product description            |
-| quantity      | INT       | Available quantity             |
-| status        | VARCHAR   | Product status (e.g., active)  |
-| created_at    | TIMESTAMP | Record creation timestamp      |
-| updated_at    | TIMESTAMP | Record update timestamp        |
+| Column        | Type            | Description                    |
+|---------------|-----------------|--------------------------------|
+| id            | bigint unsigned | Primary Key                    |
+| title         | varchar(255)    | Product title                  |
+| price         | varchar(255)    | Product price                  |
+| product_code  | varchar(255)    | Unique code for the product    |
+| description   | varchar(255)    | Product description            |
+| quantity      | varchar(255)    | Available quantity             |
+| status        | varchar(255)    | Product status (e.g., active)  |
+| created_at    | timestamp       | Record creation timestamp      |
+| updated_at    | timestamp       | Record update timestamp        |
 
 ## How to Run the Project
 
@@ -96,23 +84,28 @@ This project involves multiple applications to manage a custom PC shop, includin
     ```
 
 3. **Set up the databases**:
-    - Create `auth_db` and `product_db` databases.
+    - Create `laravel_db` database.
     - Run the provided SQL scripts to create the tables.
 
-4. **Run the User Authentication Service**:
+4. **Run the Laravel Web Administrator**:
     ```sh
-    cd auth-service
-    ./run.sh
+    cd web-administrator
+    php artisan serve --host 192.168.1.116
     ```
 
-5. **Run the Product Management Service**:
-    ```sh
-    cd product-service
-    ./run.sh
-    ```
+5. **Run the Customer Application (Java Swing) in Eclipse**:
+    - Open Eclipse IDE.
+    - Import the Java project:
+      - Go to `File > Import`.
+      - Select `Existing Projects into Workspace` under the `General` category.
+      - Click `Next`.
+      - Browse to the directory where your Java project is located.
+      - Select the project and click `Finish`.
+    - Run the `LoginForm` class:
+      - In the `Package Explorer`, navigate to the `LoginForm` class.
+      - Right-click on `LoginForm` and select `Run As > Java Application`.
 
 6. **Access the application**:
-    - User Authentication: `http://localhost:8000`
-    - Product Management: `http://localhost:8000/products`
+    - Web Administrator: Open your web browser and go to `http://192.168.1.116:8000`.
+    - Customer Application: Run the Java Swing application from Eclipse as described above.
 
-Enjoy managing your Custom PC Shop!
