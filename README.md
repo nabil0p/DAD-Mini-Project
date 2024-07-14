@@ -15,7 +15,7 @@ This project involves multiple applications to manage a custom PC shop, includin
 ## Architecture/Layer Diagram
 
 
-# Web Administrator (Laravel)
+### Web Administrator (Laravel)
 
 ```mermaid
 %% Web Administrator (Laravel)
@@ -68,7 +68,7 @@ Stores the application's data. It includes the `users_table` and `products_table
 
 
 
-# Customer Application (Java Swing)
+### Customer Application (Java Swing)
 
 ```mermaid
 %% Customer Application (Java Swing)
@@ -113,7 +113,7 @@ Facilitates communication between the GUI layer and the backend. It includes an 
 - **REST_API** is the backend API that the client communicates with.
 
 
-# Middleware
+### Middleware
 
 ```mermaid
 %% Middleware
