@@ -142,7 +142,7 @@ Ensures the user has the necessary permissions for certain actions.
 Logs incoming requests and outgoing responses for monitoring and debugging purposes.
 
 
-## List of URL Endpoints (Middleware RESTful)
+# List of URL Endpoints (Middleware RESTful)
 
 ### User Authentication Endpoints
 - `POST /login`: Login an existing user.
